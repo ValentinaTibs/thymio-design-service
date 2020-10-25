@@ -321,3 +321,8 @@ h1{
 table td{
   padding: 8px 20px;
 }
+
+.freebirdAnalyticsViewQuestionTitle{
+      color: #000;
+font-size: 1.05rem;
+}
