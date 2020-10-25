@@ -317,3 +317,7 @@ font-family: 'Pontano Sans', sans-serif;
 h1{
   font-size: 2.85rem
 }
+
+table td{
+  padding: 8px 20px;
+}
