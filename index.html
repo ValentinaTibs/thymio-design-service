@@ -3,12 +3,20 @@
 
 <script src="./jquery.min.js"></script>
 <script src="./swiper.min.js"></script>
-
 <link rel="stylesheet" href="./swiper.min.css">
+
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+<script src="./graph.js"></script>
+
 <script src="./custom.js"></script>
 <link rel="stylesheet" href="./custom.css">
 
+    
+
+
 </head>
+
 
 <body>
 
@@ -21,9 +29,15 @@
       <br/>
     </article>
 
+    <h2> 
+      <span onclick="showPersonas()">Personas </span>  - 
+      <span onclick="showNeeds()">Needs</span>  -
+      <span onclick="showBackground()">Background Information</span>
+     </h2>
+
     <article>
         <h2> Scenario Collection</h2>
-        <p>During the first phase o collective <b>16</b> Thymio users provided <b>48</b> 
+        <p>During the first phase o collective <b>16</b> Thymio users provided <b>48</b> scenarios
         <h5> Scenario Analysis</h5>
         <img style="width: 80%; margin: 0 10%;" src="./img/overall_scenario1.png">
         <img style="width: 80%; margin: 0 10%;" src="./img/overall_scenario2.png">
@@ -347,13 +361,8 @@ Feeling that she is playing more than making homework</p>
   <div class="container">
 
     <article>
-        <h2> Needs Extraction</h2>
-      
-
-        <iframe src="https://codepen.io/valentinatibs/full/JjKKddE"
-style="width: 100%;height: 1400px;" 
- title="W3Schools Free Online Web Tutorials"></iframe>
-
+        <h2> Users Needs Analysis</h2>
+        <div id='32b5efaa-8d29-4a04-8484-37786fc7f3a1' style="height:1700px;"><!-- Plotly chart will be drawn inside this DIV --></div>
     </article>
 
 
