@@ -322,7 +322,16 @@ table td{
   padding: 8px 20px;
 }
 
+
 .freebirdAnalyticsViewQuestionTitle{
       color: #000;
 font-size: 1.05rem;
+}
+
+.padded{
+  padding: 20px;
+}
+
+article p{
+  padding: 0 5px 0 10px;
 }

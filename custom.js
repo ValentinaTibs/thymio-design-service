@@ -137,13 +137,59 @@ $(document).ready(function() {
     }
   });
 
+
+  
+
   $(window).on('resize', function() {
     galleryTop.onResize();
     swiperSide.onResize();
     swiperProduct.onResize();
+
   });
+
 });
 
+
+
+  function showUserstories(){
+    $( '#user_need' ).hide();
+    $( '#persona_analysis' ).hide();
+    $( '#background-info' ).hide();
+    $( '#phase-1' ).hide();
+    $( '#user_stories' ).show();
+
+  }
+
+  function showPersonas(){
+    $( '#user_need' ).hide();
+    $( '#persona_analysis' ).show();
+    $( '#background-info' ).hide();
+    $( '#phase-1' ).hide();
+    $( '#user_stories' ).hide();
+  }
+
+function showNeeds(){
+    $( '#user_need' ).show();
+    $( '#persona_analysis' ).hide();
+    $( '#background-info' ).hide();
+    $( '#phase-1' ).hide();
+    $( '#user_stories' ).hide();
+  }
+  function showBackground(){
+    $( '#user_need' ).hide();
+    $( '#persona_analysis' ).hide();
+    $( '#background-info' ).show();
+    $( '#phase-1' ).hide();
+    $( '#user_stories' ).hide();
+  }
+
+  function showPhase1(){
+    $( '#user_need' ).hide();
+    $( '#persona_analysis' ).hide();
+    $( '#background-info' ).hide();
+    $( '#phase-1' ).show();
+    $( '#user_stories' ).hide();
+  }
 
 
 
