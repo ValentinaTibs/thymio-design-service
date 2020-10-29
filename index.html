@@ -10,8 +10,9 @@
 
 <script src="./custom.js"></script>
 <link rel="stylesheet" href="./custom.css">
-<script src="https://use.fontawesome.com/450d295658.js"></script>
 <link href="./fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+
+
 
 
 </head>
@@ -21,6 +22,45 @@
 <script type="text/javascript">
 
 
+  function showUserstories(){
+    $( '#user_need' ).hide();
+    $( '#persona_analysis' ).hide();
+    $( '#background-info' ).hide();
+    $( '#phase-1' ).hide();
+    $( '#user_stories' ).show();
+
+  }
+
+  function showPersonas(){
+    $( '#user_need' ).hide();
+    $( '#persona_analysis' ).show();
+    $( '#background-info' ).hide();
+    $( '#phase-1' ).hide();
+    $( '#user_stories' ).hide();
+  }
+
+function showNeeds(){
+    $( '#user_need' ).show();
+    $( '#persona_analysis' ).hide();
+    $( '#background-info' ).hide();
+    $( '#phase-1' ).hide();
+    $( '#user_stories' ).hide();
+  }
+  function showBackground(){
+    $( '#user_need' ).hide();
+    $( '#persona_analysis' ).hide();
+    $( '#background-info' ).show();
+    $( '#phase-1' ).hide();
+    $( '#user_stories' ).hide();
+  }
+
+  function showPhase1(){
+    $( '#user_need' ).hide();
+    $( '#persona_analysis' ).hide();
+    $( '#background-info' ).hide();
+    $( '#phase-1' ).show();
+    $( '#user_stories' ).hide();
+  }
 
 </script>  
 
