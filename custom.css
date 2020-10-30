@@ -39,7 +39,7 @@ article {
   padding: 15px 0;
 }
 h1, h2, p {
-  margin-bottom: 15px;
+  margin: 20px;
 }
 h1, h2 {
   line-height: 1em;
@@ -99,7 +99,7 @@ a:hover {
 }
 
 .product-gallery .product-photo-main {
-  margin-bottom: 30px;
+  margin: 30px;
 }
 
 .product-gallery .product-photos-side .swiper-container {
@@ -318,8 +318,14 @@ h1{
   font-size: 2.85rem
 }
 
+table{
+  width: 100%;
+}
+
 table td{
   padding: 8px 20px;
+  font-family: 'Pontano Sans', sans-serif;
+
 }
 
 
@@ -334,4 +340,30 @@ font-size: 1.05rem;
 
 article p{
   padding: 0 5px 0 10px;
+}
+
+
+button{
+ border: 0;
+ background: none;
+ box-shadow: none;
+ border-radius: 0px;
+ padding: 20px;
+ background: #bbb;
+ margin: 0 10px;
+ 
+   border-radius:3px;
+}
+
+.main-svg{
+  background-color: transparent !important;
+}
+
+#menu{
+  background: #666;
+  padding: 2%;
+  border-color: #777;
+  border-width: 4px;
+  border-radius:3px;
+  margin: 3% 0;
 }

@@ -66,34 +66,9 @@ function showNeeds(){
 
 <style type="text/css">
   
-button{
- border: 0;
- background: none;
- box-shadow: none;
- border-radius: 0px;
- padding: 20px;
- background: #bbb;
- margin: 0 10px;
- 
-   border-radius:3px;
-}
-
-.main-svg{
-  background-color: transparent !important;
-}
-
-#menu{
-  background: #666;
-  padding: 20px;
-  border-color: #777;
-  border-width: 4px;
-  border-radius:3px;
-}
 
 </style>
 
- <div class="main">
-  <div class="container">
     <article>
       <h1 class="center">Thymio - Service Re-Design Process</h1>
       <h2 class="subtitle center">exploring product potential, users, and bottleneck</h2>
@@ -103,18 +78,18 @@ button{
 
     <h2 id="menu"> 
       <button onclick="showPersonas()">Personas </button> 
-      <button onclick="showNeeds()">Needs</button> 
+      <button onclick="showNeeds()">Users Needs Analysis</button> 
       
       <button onclick="showBackground()">Background Information</button>
-      <button onclick="showPhase1()">Phase 1</button>
+      <button onclick="showPhase1()">Initial Scenarios</button>
      </h2>
 
-    
+ <div class="main" id="persona_analysis" id="persona_analysis" >
+  <div class="container">
 
-    <div class="product-gallery" id="persona_analysis"  >
-        <h2> Personas Analysis</h2>
+<h2> Personas Analysis</h2>
 
-<p>
+        <p>
           <table>
            <thead>
               <tr>
@@ -166,7 +141,7 @@ button{
               <tr><td colspan="5"><hr></td></tr>
                <tr>
                   <td rowspan="4">A</td>
-                  <td rowspan="4">Parents and others informal educators</td>
+                  <td rowspan="4">Others</td>
                   <td> AGreenGames NGO</td>
                   <td>serious game company</td>
                   <td> #5</td>
@@ -188,6 +163,10 @@ button{
 
         </table>
 </p>
+    
+
+    <div class="product-gallery"  >
+        
 
       <div class="product-photo-main" id ="product-photo-main">
         <div class="swiper-container">
@@ -443,19 +422,22 @@ Feeling that she is playing more than making homework</p>
   <div class="container">
 
 <script type="text/javascript">
- function toggleStatic(){
-   $( '#32b5efaa-8d29-4a04-8484-37786fc7f3a1' ).toggle();
-   $( '#needs-pic' ).toggle();
-  $( '#view-static' ).toggle();
-  $( '#view-playable' ).toggle();
- }
+ function showStatic(){
+   $( '#32b5efaa-8d29-4a04-8484-37786fc7f3a1' ).hide();
+   $( '#needs-pic' ).show();
+   }
+   function showDinamic(){
+    $( '#32b5efaa-8d29-4a04-8484-37786fc7f3a1' ).show();
+   $( '#needs-pic' ).hide();
+  }
+ 
 </script>
 
-    
+
         <h2>Users Needs Analysis</h2>
 
-        <h3 id ="view-static" style="cursor: pointer;" onclick="toggleStatic();"> <i class="fas fa-exclamation-circle"></i> view the static version -</h3>
-<h3 id ="view-playable"  style="display: none;cursor: pointer;" onclick="toggleStatic();"> <i class="fas fa-exclamation"></i> view the interactive version -</h3>
+        <h3 class="padded">  <i class="fas fa-exclamation-circle"></i> <i id ="view-static" style="cursor: pointer;" onclick="showStatic();">view the static version</i>  <i class="fas fa-exclamation"></i> <i id ="view-playable"  style="cursor: pointer;" onclick="showDinamic();">view the interactive version  </i>
+ </h3>
 
 
         <div id='32b5efaa-8d29-4a04-8484-37786fc7f3a1' style="width: 100%;"><!-- Plotly chart will be drawn inside this DIV --></div>
@@ -484,9 +466,9 @@ Feeling that she is playing more than making homework</p>
 
  <div class="main" id="phase-1" style="display: none;">
   <div class="container">
-
+<h2> Initial Scenarios </h2>
       <article >
-        <h2> Phase 1 - Scenario Collection results</h2>
+        
         <p>During the first phase o collective <b>16</b> Thymio users provided <b>48</b> scenarios
         <h5> Scenario Analysis</h5>
         <img style="width: 80%; margin: 0 10%;" src="./img/overall_scenario1.png">
@@ -544,20 +526,14 @@ Program Thymio by inserting a SD CARD (physical reprogramming). Thymio reads bar
  <div class="main" id="background-info" style="display: none;">
   <div class="container">
 
+  <h2> User Stories</h2>
 
     <article id="background-info" >
         
 
-
-
-    <!------------ ------  END user stories --------------- --->
-
-
-  <h2> User Stories</h2>
-
     
     <article id="us_1">
-      <h4 class="center">The Special Birthday Present</h4>
+      <h4 class="center"><i>#1: </i>The Special Birthday Present</h4>
       
       
       <br/>
@@ -572,7 +548,7 @@ Michela's solution is also compared with the ones of other users, and evaluated 
     </article>
 
     <article id="us_2" >
-      <h4 class="center">A groupwork for a group of robots</h4>
+      <h4 class="center"><i>#2: </i>A groupwork for a group of robots</h4>
       
       <br/>
       <p class="padded">We are student group of 3 and have to make a collective task with 3 Thymio that have to communicate together. In first time we have to split the work and decide how is responsible of each part and agree on witch channel, type of message allow to make the task. We have all a computer and can use the language of programming between VPL or Aseba to communicate. 
@@ -584,7 +560,7 @@ Finally we can show our solution comparing with other team in a small competitio
 
    
    <article id="us_3" >
-      <h4 class="center">Thymio brings me a coffee</h4>
+      <h4 class="center"><i>#3: </i>Thymio brings me a coffee</h4>
       
       <br/>
       <p class="padded">I am student in a communication software lecture. We have to learn smart object networking. We have for that different kind of Thymio that are connect through wifi. We see all robots inside the network as well we have access trough specif IP to smart sensors. We can easily filter the robot by name or number so that we found our robots and can make a sub network that are not interfering the other robot from other student. One time my network is set up I can program my robots using python or aseba in studio. I can see easily all variable inside robots and plot graph or set up a monitor panel that show me the status (like sysquake). 
@@ -593,7 +569,7 @@ So I make my smart scenario where when I come back home, the camera robot is rec
 
 
    <article id="us_4" >
-      <h4 class="center">Training the Teachers</h4>
+      <h4 class="center"><i>#4: </i>Training the Teachers</h4>
       
       <br/>
       <p class="padded">This user story is about a primary school teacher who should introduce computer science or artificial intelligence or computstional thinking in her class based on the goals defined in the curriculum. This story could be also the story of a teacher who would like to use educational robotics in his teaching. The first thing the teacher will looking at is training. Of course she would prefer a standard training by human trainers but any hybrid solution could also help. As this is a path supported by local universities and government, she goes on the thymio community platform looking for a course in her region. She finds hybrid courses where a human trainer helps her remotely. This help includes debug, clarification of the students' progress, analisis of the activities of the class, and thus remedy the difficulties encountered. For this the trainer has access to analytics of the class activity. The teacher follows the training by making activities together with other 2-3 teachers, meeting them outside school hours. To run this she gets the full equipment at home and she can interact remotely with a set up located at the trainer's place. The training is strongly centerd on the activities done by the kids that the teacher can experiment to understand the full concept. The activities combine unplugged activities and activities using pc or tablet, transversal (soft) skills and disciplinary ones. A library of activities is available and can be easily explored (videos show how this look like) and tested. The activities are relevant with the curriculum, radiate in the interdisciplinary fields calling for the creativity (and critical spirit) of students, to guide them in their daily actions with the machines that surround them. Every activity is explicitly connected to some concepts of the curriculum. The teacher is then invited to experiment the activities in her class, using the same environment used in her training and borrowing the thymio for the class from a local (or school based) educational center. The Thymio environment allows to manage the class, organise sequences of activities, modify the exercises, collect and format evaluations, keep logs pf activities and grades. It can be combined with other well-known environments such as graasp. When in the class, the children can also exchange with other classes and have common activities remotely, accessing a common infrastructure. The teacher can continuously exchange with colleagues about the experience, get and give suggestions. Results can be formatted to be sent online to the parents. If the teacher create new activities she can easily share them with colleagues.
@@ -602,7 +578,7 @@ In case of COVID situations, the teacher can access remotely to the environment 
     </article>
 
       <article id="us_5" >
-      <h4 class="center">groupwork</h4>
+      <h4 class="center"><i>#5: </i>Groupwork</h4>
       
       <br/>
       <p class="padded">GreenGames is an NGO that uses new technologies, including robots, to deliver serious games to promote sustainability and environmentally respectful lifestyles. The education department wants to setup a new interactive serious game to be delivered at fairs and science festivals, targeting children from 6 to 12 years old. They learned about Thymio and want to setup a game with a dozen robots working in parallel. They first experience with the simulator, and then decide to rent or buy the robots.
@@ -616,7 +592,7 @@ The demonstration is made available online to other associations willing to deli
     </article>
 
    <article id="us_6" >
-      <h4 class="center">Just a Normal day at HighSchool</h4>
+      <h4 class="center"><i>#6: </i>Just a Normal day at HighSchool</h4>
       
       <br/>
       <p class="padded">This user story is about a high-school computer science teacher who would like to use Thymio in her computer science courses to introduce artificial intelligence or computational thinking , of course aligned with the goals defined in the curriculum. This person has a master in computer science and does not need any training in this field, but needs good documentation and well-prepared activities. Therefore she looks on internet and find the Thymio repository and teacher community. She finds activities that are well aligned with the curriculum, and using the same language she is using (phython). She can modify the activities to match specific needs of the class (inclusion). The programming environment she can access allows simulation, use of a real robot, debug, remote access and is easy to install on the very different computers of the students (BYOD). To test she can get the full equipment at home and she can interact remotely with a set up located in a central place. The activities combine unplugged activities and activities using pc or tablet, CS core concepts and sociological aspects related to digital transformation. The teacher is then testing the activities in her class, getting thymio from central borrowing centers. The Thymio environment allows to manage the class, organise sequences of activities, modify the exercises, collect and format evaluations, keep logs of activities, do analytics on these logs and and manage grades. It can be combined with other well-known environments such as graasp. When in the class, the children can also exchange with other classes and have common activities remotely, accessing a common infrastructure. The teacher can continuously exchange with colleagues about the experience, get and give suggestions. Results can be formatted and published online. If the teacher create new activities she can easily share them with colleagues.
@@ -626,7 +602,7 @@ In case of COVID situations, the teacher can access remotely to the environment 
     </article>
 
    <article id="us_7" >
-      <h4 class="center">Arianna in class</h4>
+      <h4 class="center"><i>#7: </i>Arianna in class</h4>
       
       <br/>
       <p class="padded">"Arianna is a researcher in social pedagogy that loves to use new technologies, especially robots, to create educational content that develops soft skills in children.
@@ -641,7 +617,7 @@ Arianna wrote her code using Aseba language and save the bytecode on a sd card t
     </article>
 
    <article id="us_8" >
-      <h4 class="center">The end of the year Diorama</h4>
+      <h4 class="center"><i>#8: </i>The end of the year Diorama</h4>
       
       <br/>
       <p class="padded">"A coding teacher would like to organise the annual year-end demonstration with her students. She selected the Thymio robots as robotic platform to implement an animated diorama. Students work in groups of 2 or 3 with one robot per group to prepare their part. The robots are used to animate the different characters or elements of the set. Moreover, some robots will be ""animated"" by children with special needs thanks to the integration with C.A.A. Sw. to guarantee inclusion.
@@ -653,7 +629,7 @@ And afterwards, the teacher will create and share libraries of the behaviours as
     </article>
 
    <article id="us_9" >
-      <h4 class="center">Fantasy Story</h4>
+      <h4 class="center"><i>#9: </i>Fantasy Story</h4>
       
       <br/>
       <p class="padded">"
@@ -667,7 +643,7 @@ The teacher is satisfied about his project as he realises that even pupils that 
     </article>
 
    <article id="us_10" >
-      <h4 class="center">The day is very special: Thymio is in class!</h4>
+      <h4 class="center"><i>#10: </i>The day is very special: Thymio is in class!</h4>
       
       <br/>
       <p class="padded">"Curiosity is palpable in the air: today we will finally work with a robot! I am sitting at my desk, in the front row. Usually the front row is not coveted, but today I'm glad to be so far ahead, I will be able to see the robots better! The bell rings and, finally, two boys enter the class with a steel-colored briefcase and bags containing computers. We are all sitting in place, eagerly waiting to begin. The boys introduce themselves, they say they are educators specialized in robotics: today they will give a lesson on cyberbullying! They open the steel case, and, inside, there are several white robots, with two black wheels. The boys present the robot: it's called Thymio, it's a small white robot, with two wheels and different sensors, which allow it to find obstacles and move around the room alone. Thymio has LEDs that change color; each color corresponds to a different behavior! I can't wait to try! The two educators make us divide into groups: luckily I'm with my best friend! Each group has a robot and a computer: they initially make us try the behaviors already present in Thymio, corresponding to the various colors. Then they make us turn on the computer and explain Thymio VPL, the program to program the robot! It is very simple and colorful! Our group has to program the bully. It is difficult for everyone to agree, but in the end we manage to write a beautiful program! The educators complimented us!
@@ -676,7 +652,7 @@ When we organize classroom workshops, teachers often ask us to characterize them
     </article>
 
    <article id="us_11" >
-      <h4 class="center">Thymio for Inclusion - CAA</h4>
+      <h4 class="center"><i>#11: </i>Thymio for Inclusion - CAA</h4>
       
       <br/>
       <p class="padded">"
@@ -685,7 +661,7 @@ The idea is that a Teacher who supports a student with difficulties to learn (fo
     </article>
 
    <article id="us_12" >
-      <h4 class="center">Stripes Digitus Lab</h4>
+      <h4 class="center"><i>#12: </i>Stripes Digitus Lab</h4>
       
       <br/>
       <p class="padded">"
