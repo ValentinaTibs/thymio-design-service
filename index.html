@@ -480,11 +480,21 @@ Feeling that she is playing more than making homework</p>
 
       <br/>
  
-      <img style="width: 80%; margin: 0 10%;" src="./img/Infographic.png">
+      <img style="width: 80%; margin: 3% 10%;" src="./img/Infographic.png">
+<script type="text/javascript">
+  function ShowTable(){
+    $( '#tag-detail-table' ).toggle();
+    $( '#tag-detail-show' ).toggle();
+    $( '#tag-detail-hide' ).toggle();
+  }
 
+</script>
+    <h2 onclick="ShowTable();" style="cursor: pointer;"> 
+      <b id="tag-detail-show"><i class="fas fa-exclamation-circle"></i> Show all Tags details</b>
+      <b id="tag-detail-hide" style="display: none;"><i class="fas fa-exclamation"></i> Hide all Tags details</b> 
+    </h2>
 
-
-      <table><tr style="background-color:#FF5757" ><td>High Compatibility</td><td>Flexibility of tools: compatibility with different programming languages (i.e., Python), as well as with different simulated or real robots. Integration with ROS. OO programming</td></tr>                  
+      <table id="tag-detail-table" style="display: none;"><tr style="background-color:#FF5757" ><td>High Compatibility</td><td>Flexibility of tools: compatibility with different programming languages (i.e., Python), as well as with different simulated or real robots. Integration with ROS. OO programming</td></tr>                  
 <tr style="background-color:#FF5757" ><td>Abstraction skills</td><td>Make students think about their code BEFORE coding. Use the Thymio load program interface as a tool to help students cultivate abstraction.</td></tr>                  
 <tr style="background-color:#FF5757" ><td>Smart Applications</td><td>Enable dealing with AI, Image Processing challenges and expanding applications (e.g. domotics) or implementation of more high-level and complex algorithms.</td></tr>                  
 <tr style="background-color:#FF5757" ><td>Advanced usage</td><td>Thymio used to teach the basics of robotics in high schools or universities, or for robotics research</td></tr>                  
@@ -695,7 +705,7 @@ The exploratory laboratory is the basis of all our events at the Stripes Digitus
 <script src="./graph.js"></script>
 <script type="text/javascript">
   $( document ).ready(function() {
-    showPersonas();
+      showPersonas();
 });
 </script>
 </body>
