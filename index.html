@@ -77,11 +77,11 @@ function showNeeds(){
     </article>
 
     <h2 id="menu"> 
-      <button onclick="showPersonas()">Personas </button> 
-      <button onclick="showNeeds()">Users Needs Analysis</button> 
+      <button onclick="showPersonas()" style="cursor: pointer;">Personas </button> 
+      <button onclick="showNeeds()" style="cursor: pointer;">Users Needs Analysis</button> 
       
-      <button onclick="showBackground()">Background Information</button>
-      <button onclick="showPhase1()">Initial Scenarios</button>
+      <button onclick="showBackground()" style="cursor: pointer;">Background Information</button>
+      <button onclick="showPhase1()" style="cursor: pointer;">Initial Scenarios</button>
      </h2>
 
  <div class="main" id="persona_analysis" id="persona_analysis" style="display: none;" >
@@ -484,7 +484,7 @@ Feeling that she is playing more than making homework</p>
 <script type="text/javascript">
   function ShowTable(){
     $( '#tag-detail-table' ).fadeToggle( "slow", "linear" );
-    
+
     $( '#tag-detail-show' ).toggle();
     $( '#tag-detail-hide' ).toggle();
   }
