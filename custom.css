@@ -367,3 +367,7 @@ button{
   border-radius:3px;
   margin: 3% 0;
 }
+
+th, tr,td{
+  text-align: left;
+}
