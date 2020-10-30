@@ -483,7 +483,8 @@ Feeling that she is playing more than making homework</p>
       <img style="width: 80%; margin: 3% 10%;" src="./img/Infographic.png">
 <script type="text/javascript">
   function ShowTable(){
-    $( '#tag-detail-table' ).toggle();
+    $( '#tag-detail-table' ).fadeToggle( "slow", "linear" );
+    
     $( '#tag-detail-show' ).toggle();
     $( '#tag-detail-hide' ).toggle();
   }
